@@ -23,8 +23,39 @@ As a client I would like a way to display ads via stub, and a way to change dura
 
 
 Greg 15-21
-
-
+15:
+    As a user, I want my passwords to be salted and hased because I want to
+        login securely.
+16:
+    As a client, I want the game assets to be small because I want the games to
+        load quickly.
+17:
+    As a client, I want the game to make engaging sounds because the game's
+        sounds help keep me engaged.
+    As a user, I want to be able to mute the game since the game's sounds 
+        could become repetitive and annoying.
+    As a user, I want the game to remain muted between sessions because I
+        don't want the game making noise every time I play it.
+18:
+    As a client, I want all the games to be playable with one hand because I
+        don't want the game to become too confusing.
+    As a client, I want the controls to be separate from game logic because
+        I want to be able to extend this to other platforms.
+19:
+    As a user, I want a pause button on each game, because I don't always
+        want to play in one session.
+20:
+    As a user, I want to be able to save my progress and resume it later 
+        because I sometimes don't always have time to finish the game.
+    As a client, I want the game to interface to a save system, originally to
+        cookies, because I want to save game to a database later.
+    As a user, I want to be able to resume my saved progress because I want
+        to finish a game later.
+    As a user, I want to be able to scrap my current saved progress because I
+        want to play a new game instead of finishing my current game.
+21:
+    As a user, I don't want it to crash because I want to be able to freely
+        play my game without issues.
 
 
 Chance 21-26
