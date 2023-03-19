@@ -15,4 +15,21 @@ Pick 3 games to include and create source code for all 3
 Add username and password access.
 Create scoring systems for these games and create scoreboard based on people's usernames.
 
+Sophia 7-14
+As a user, I want for my login to be remembered, logging me in automatically along with a welcome back message mentioning my username. (1 hour)
+As a client I would like the app to have the games designed with a clear separation so deleting or removing games is easier. (0.5 hours)
+As a client I would like the protocols and interfaces utilitized to be standard, so it is easier to use with third-party tools. (0.5 hours)
+As a client I would like you to use a version control system so that developers collaborate and can rollback changes. (0 hours)
+As a client I would like you to plan for a database to be utilized by creating a database with fake information now for testing so that I know it is on standby. (2 hours)
+As a client I would like for the GUI code to not have any business logic or game logic included in it so it could be used for the mobile market. (1 hours).
+As a user, I would like to be able to customize the overall “wallpapering” of my view of the app. (2 hours)
+As a client I would like a way to display ads via stub, and a way to change duration of ads via admin login. I would like the admin login to use the name Soggie Muffins and the password to be 123 (4 hours)
+
+Tasks-
+Create a database for user information
+Create seperate files for each of the games to be developed on
+Keep GUI separated from game logic
+Create a user customizable GUI function to change wallpapering
+Create ad space controllable via admin login
+Create welcome back message function
 
