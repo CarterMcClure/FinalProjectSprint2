@@ -1,12 +1,12 @@
 Carter 1-6
-As a user, I want a more interesting name and theme than Suite of Games so that I can easily decipher this project
-As a user, I want the games to be based off of Lambert's github games so that it can be familiar while also feeling new.
-As a user, I want three games that are joined into one webpage so that it is easy to navagate.
-As a user, I want to see stats for the games so that I can compare my scores to others.
-As a user, I want no pop ups so my game is not interrupted.
-As a user, I want the games to have a similar smooth look so that the interface can look cool while playing.
-As a user, I want to log in to the site so that my info and stats can be saved.
-As a client, I want the login to be seperate so that it can be manipulated without changing the whole website.
+As a user, I want a more interesting name and theme than Suite of Games so that I can easily decipher this project(0 hours)
+As a user, I want the games to be based off of Lambert's github games so that it can be familiar while also feeling new (0.5 hours)
+As a user, I want three games that are joined into one webpage so that it is easy to navagate(8 hours)
+As a user, I want to see stats for the games so that I can compare my scores to others(2 hours)
+As a user, I want no pop ups so my game is not interrupted(0 hours)
+As a user, I want the games to have a similar smooth look so that the interface can look cool while playing(4 hours)
+As a user, I want to log in to the site so that my info and stats can be saved(2 hours)
+As a client, I want the login to be seperate so that it can be manipulated without changing the whole website(2 hours)
 
 Tasks-
 Create github repo for website and make an html page, css, and javascript file.
