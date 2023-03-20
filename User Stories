@@ -59,3 +59,9 @@ Greg 15-21
 
 
 Chance 21-26
+22. As a player, I would like to be able to save my progress so that I can come back to where I started without restarting.
+23. As a game developer, I would like the suite of games to have a separation of concerns and interfaces, so that I can test new components without adding bugs.
+24. As a developer, I would like an interface to add images on the pause menu when the mute button is hit, so that our team can put an “easter egg” (an image) of the team (doing something silly)
+25. As a player, I would like a pause button on the game so that I can stop playing if I want to take a break.
+26. As a developer, I would like crash reports to include some humorous errors so we can lighten the mood among the dev team whenever crashes happens.
+27. As the client, we would like help screens to be pop up bubbles that appear when the mouse hovers over a “help” icon, so that the UI can be fresh and easy to read at any time.
