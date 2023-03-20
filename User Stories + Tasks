@@ -33,3 +33,54 @@ Create a user customizable GUI function to change wallpapering
 Create ad space controllable via admin login
 Create welcome back message function
 
+
+Greg 15-21
+--------------------
+15:
+    As a user, I want my passwords to be salted and hashed because I want to
+        login securely. (1 hours)
+16:
+    As a client, I want the game assets to be small because I want the games to
+        load quickly. (2 hours)
+17:
+    As a client, I want the game to make engaging sounds because the game's
+        sounds help keep me engaged. (2 hours)
+    As a user, I want to be able to mute the game since the game's sounds 
+        could become repetitive and annoying. (2 hours)
+    As a user, I want the game to remain muted between sessions because I
+        don't want the game making noise every time I play it. (2 hours)
+18:
+    As a client, I want all the games to be playable with one hand because I
+        don't want the game to become too confusing. (0 hours)
+    As a client, I want the controls to be separate from game logic because
+        I want to be able to extend this to other platforms. (4 hours)
+19:
+    As a user, I want a pause button on each game, because I don't always
+        want to play in one session. (4 hours)
+20:
+    As a user, I want to be able to save my progress and resume it later 
+        because I sometimes don't always have time to finish the game. (8 hours)
+    As a client, I want the game to interface to a save system, originally to
+        cookies, because I want to save game to a database later. (2 hours)
+    As a user, I want to be able to resume my saved progress because I want
+        to finish a game later. (1 hour)
+    As a user, I want to be able to scrap my current saved progress because I
+        want to play a new game instead of finishing my current game. (1 hour)
+21:
+    As a user, I don't want it to crash because I want to be able to freely
+        play my game without issues. (4 hours)
+
+-- Task List --
+Passwords stored are salted and hashed.
+Game assets should be medium quality.
+Game assets should be under 100k in size.
+Add sounds effects to actions within UI and game.
+Add a mute option for all the sounds.
+Allow remembering the setting of the mute option.
+Ensure games are playable with one hand.
+Separate controls from game logic.
+Each game should have a pause button.
+Create a save system for the games (maybe per game).
+Allow save system to continue where left off or scrap progress.
+The game should contain minimal bugs and crashes.
+
