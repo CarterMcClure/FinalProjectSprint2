@@ -28,7 +28,10 @@ As a client I would like you to plan for a database to be utilized by creating a
 As a client I would like the protocols and interfaces utilitized to be standard, so it is easier to use with third-party tools. (0.5 hours)
 As a client I would like a way to display ads via stub, and a way to change duration of ads via admin login. I would like the admin login to use the name Soggie Muffins and the password to be 123 (4 hours)
 As a user, I would like to be able to customize the overall “wallpapering” of my view of the app. (2 hours)
+As the client, we would like help screens to be pop up bubbles that appear when the mouse hovers over a “help” icon, so that the UI can be fresh and easy to read at any time(2 hours)
 As a client I would like for the GUI code to not have any business logic or game logic included in it so it could be used for the mobile market. (1 hours).
+As a developer, I would like an interface to add images on the pause menu when the mute button is hit, so that our team can put an “easter egg” (an image) of the team (doing something silly) (1 hour)
+As a developer, I would like crash reports to include some humorous errors so we can lighten the mood among the dev team whenever crashes happens.(< 1 hour)
 
 TASKS IN ORDER OF PRIORITY
 Create github repo for website and make an html page, css, and javascript file.
@@ -52,6 +55,9 @@ Add sounds effects to actions within UI and game.
 Add a mute option for all the sounds.
 Allow remembering the setting of the mute option.
 Create a user customizable GUI function to change wallpapering
+Add help pop up interface for clean UI
 Create ad space controllable via admin login
+Add easter egg interface for devs
+Add humorous crash logs
 
 
