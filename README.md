@@ -14,4 +14,4 @@ These games are made to be able to be played with only one hand!
     - Use ...
 
 ## Contributing
-The style we learned matches well with Google's styleguide, found [here] (https://google.github.io/styleguide/jsguide.html)
+The style we learned matches well with Google's styleguide, found [here](https://google.github.io/styleguide/jsguide.html)
