@@ -1,14 +1,14 @@
 USER STORIES IN ORDER OF PRIORITY
 
-As a user, I want a more interesting name and theme than Suite of Games so that I can easily decipher this project(0 hours)
+As a user, I want a more interesting name and theme than Suite of Games so that I can easily decipher this project(1 hours)
 As a user, I want three games that are joined into one webpage so that it is easy to navagate(8 hours)
-As a client, I want all the games to be playable with one hand because I don't want the game to become too confusing. (0 hours
-As a client I would like you to use a version control system so that developers collaborate and can rollback changes. (0 hours)
-As a user, I want the games to be based off of Lambert's github games so that it can be familiar while also feeling new (0.5 hours)
-As a user, I want no pop ups so my game is not interrupted(0 hours)
+As a client, I want all the games to be playable with one hand because I don't want the game to become too confusing. (2 hours
+As a client I would like you to use a version control system so that developers collaborate and can rollback changes. (1 hours)
+As a user, I want the games to be based off of Lambert's github games so that it can be familiar while also feeling new (1 hours)
+As a user, I want no pop ups so my game is not interrupted(1 hours)
 As a client, I want the game assets to be small because I want the games to load quickly. (2 hours)
 As a client, I want the controls to be separate from game logic because I want to be able to extend this to other platforms. (4 hours)
-As a client I would like the app to have the games designed with a clear separation so deleting or removing games is easier. (0.5 hours)
+As a client I would like the app to have the games designed with a clear separation so deleting or removing games is easier. (1 hours)
 As a user, I don't want it to crash because I want to be able to freely play my game without issues. (4 hours)
 As a user, I want the games to have a similar smooth look so that the interface can look cool while playing(4 hours)
 As a user, I want to log in to the site so that my info and stats can be saved(2 hours)
@@ -25,13 +25,13 @@ As a client, I want the game to make engaging sounds because the game's sounds h
 As a user, I want to be able to mute the game since the game's sounds could become repetitive and annoying. (2 hours)
 As a user, I want the game to remain muted between sessions because I don't want the game making noise every time I play it. (2 hours)
 As a client I would like you to plan for a database to be utilized by creating a database with fake information now for testing so that I know it is on standby. (2 hours)
-As a client I would like the protocols and interfaces utilitized to be standard, so it is easier to use with third-party tools. (0.5 hours)
+As a client I would like the protocols and interfaces utilitized to be standard, so it is easier to use with third-party tools. (1 hours)
 As a client I would like a way to display ads via stub, and a way to change duration of ads via admin login. I would like the admin login to use the name Soggie Muffins and the password to be 123 (4 hours)
 As a user, I would like to be able to customize the overall “wallpapering” of my view of the app. (2 hours)
 As the client, we would like help screens to be pop up bubbles that appear when the mouse hovers over a “help” icon, so that the UI can be fresh and easy to read at any time(2 hours)
 As a client I would like for the GUI code to not have any business logic or game logic included in it so it could be used for the mobile market. (1 hours).
 As a developer, I would like an interface to add images on the pause menu when the mute button is hit, so that our team can put an “easter egg” (an image) of the team (doing something silly) (1 hour)
-As a developer, I would like crash reports to include some humorous errors so we can lighten the mood among the dev team whenever crashes happens.(< 1 hour)
+As a developer, I would like crash reports to include some humorous errors so we can lighten the mood among the dev team whenever crashes happens.(1 hour)
 
 TASKS IN ORDER OF PRIORITY
 Create github repo for website and make an html page, css, and javascript file.
