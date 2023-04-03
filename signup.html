@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <form id="form">
     <div class="container">
       <h1><strong>Sign-Up</strong></h1>
       <form>
@@ -16,13 +17,15 @@
         <input type="password" id="password" name="password"  required>
 
 
-        <input type="submit" value="Submit" >
+        <input type="submit" value="Sign-Up">
+        <p id="message"></p>
      
     </div>
     
   </body>
+</form>
 </html>
-
+<script src="database.js"></script>
 <style>
 
 * {
@@ -41,7 +44,7 @@ body {
   margin: 100px auto;
   max-width: 400px;
   padding: 40px;
-  background-color: :black;
+  
   background-repeat: repeat;
   border: 2px solid black;
   border-radius: 5px;
@@ -90,3 +93,8 @@ input[type="submit"]:hover {
 }
 
 </style>
+
+
+
+  
+  
