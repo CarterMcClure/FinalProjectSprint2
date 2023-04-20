@@ -113,26 +113,8 @@ function placeTetromino() {
             row--;
         }
     }
-    playerScore += convertClearedToScore(linesCleared);
+    playerScore.update(linesCleared);
     tetromino = getNextTetromino();
-}
-
-// Function for conversion to remove from clearing logic
-function convertClearedToScore(linesCleared) {
-    switch (linesCleared) {
-        case 0:
-            return 0;
-        case 1:
-            return 40;
-        case 2:
-            return 100;
-        case 3:
-            return 300;
-        case 4:
-            return 1200;
-        default:
-            return -1; // Something went wrong 
-    }
 }
 
 function drawNextTetromino() {
@@ -150,14 +132,6 @@ function drawNextTetromino() {
     }
 }
 
-function drawScore() {
-    contextSide.globalAlpha = 1;
-    contextSide.fillStyle = 'white';
-    contextSide.font = '24px monospace';
-    contextSide.textAlign = 'center';
-    contextSide.textBaseline = 'bottom';
-    contextSide.fillText('Score: ' + playerScore, canvasSide.width / 2, canvasSide.height - 36);
-}
 
 // show the game over screen
 function showGameOver() {
@@ -248,7 +222,6 @@ const colors = {
 };
 
 let count = 0;
-let playerScore = 0;
 let tetromino = getNextTetromino();
 let rAF = null;  // keep track of the animation frame so we can cancel it
 let gameOver = false;
@@ -299,10 +272,8 @@ function loop() {
             }
         }
     }
-
-    // Draw player score 
     drawNextTetromino();
-    drawScore();
+    playerScore.draw();
 }
 
 class PlayerController {
@@ -353,12 +324,49 @@ class ComputerControls extends PlayerController {
     }
 }
 
+class Score {
+    constructor() {
+        this.currentScore = 0;
+    }
+    draw() {
+        contextSide.globalAlpha = 1;
+        contextSide.fillStyle = 'white';
+        contextSide.font = '24px monospace';
+        contextSide.textAlign = 'center';
+        contextSide.textBaseline = 'bottom';
+        contextSide.fillText('Score: ' + this.currentScore, canvasSide.width / 2, canvasSide.height - 36);
+    }
+
+    // Function for conversion to remove from clearing logic
+    convertClearedToScore(linesCleared) {
+        switch (linesCleared) {
+            case 0:
+                return 0;
+            case 1:
+                return 40;
+            case 2:
+                return 100;
+            case 3:
+                return 300;
+            case 4:
+                return 1200;
+            default:
+                return -1; // Something went wrong 
+        }
+    }
+
+    update(linesCleared) {
+        this.currentScore += this.convertClearedToScore(linesCleared);
+    }
+}
+
 
 function pauseGame() {
     alert("paused...click ok to resume!");
 }
 
 // start the game
+let playerScore = new Score();
 let input = new ComputerControls();
 input.SetupPlayerInput();
 rAF = requestAnimationFrame(loop);
