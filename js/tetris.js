@@ -117,6 +117,7 @@ function placeTetromino() {
     tetromino = getNextTetromino();
 }
 
+// Function for conversion to remove from clearing logic
 function convertClearedToScore(linesCleared) {
     switch (linesCleared) {
         case 0:
@@ -132,6 +133,15 @@ function convertClearedToScore(linesCleared) {
         default:
             return -1; // Something went wrong 
     }
+}
+
+function drawScore() {
+    contextSide.globalAlpha = 1;
+    contextSide.fillStyle = 'white';
+    contextSide.font = '24px monospace';
+    contextSide.textAlign = 'center';
+    contextSide.textBaseline = 'bottom';
+    contextSide.fillText('Score: ' + playerScore, canvasSide.width / 2, canvasSide.height - 36);
 }
 
 // show the game over screen
@@ -152,6 +162,8 @@ function showGameOver() {
 }
 
 const canvas = document.getElementById('game');
+const canvasSide = document.getElementById('side');
+const contextSide = canvasSide.getContext('2d');
 const context = canvas.getContext('2d');
 const grid = 32;
 const tetrominoSequence = [];
@@ -230,6 +242,7 @@ let gameOver = false;
 function loop() {
     rAF = requestAnimationFrame(loop);
     context.clearRect(0,0,canvas.width,canvas.height);
+    contextSide.clearRect(0, 0, canvasSide.width, canvasSide.height);
 
     // draw the playfield
     for (let row = 0; row < 20; row++) {
@@ -271,6 +284,9 @@ function loop() {
             }
         }
     }
+
+    // Draw player score 
+    drawScore();
 }
 
 // listen to keyboard events to move the active tetromino
