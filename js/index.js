@@ -3,7 +3,7 @@ const wallpaper2 = document.getElementById("yellow");
 const wallpaper3 = document.getElementById("green");
 const wallpaper4 = document.getElementById("blue");
 const wallpaper5 = document.getElementById("rand");
-let homeMusic = new Audio("./img/TechTalk.mp3");
+let homeMusic = new Audio("./audio/TechTalk.mp3");
 var vol =.9;
 var vol2 = .5;
 
