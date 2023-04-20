@@ -33,6 +33,7 @@ function getRandomInt(min, max) {
 
 // game loop
 function loop() {
+  let applesd = new Audio("./audio/beep.mp3");
   let gameovr = new Audio("./audio/gameover.mp3");
   
   
@@ -89,7 +90,7 @@ function loop() {
     if (cell.x === apple.x && cell.y === apple.y) {
       
       snake.maxCells++;
-      
+      applesd.play();
       
 
       // canvas is 400x400 which is 25x25 grids
