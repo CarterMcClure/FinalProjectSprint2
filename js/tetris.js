@@ -135,6 +135,21 @@ function convertClearedToScore(linesCleared) {
     }
 }
 
+function drawNextTetromino() {
+    if (tetrominoSequence.length === 0) {
+        generateSequence();
+    }
+    let nextTetromino = tetrominos[tetrominoSequence.at(-1)];
+    contextSide.fillStyle = colors[tetrominoSequence.at(-1)];
+    for (let row = 0; row < nextTetromino.length; row++) {
+        for (let col = 0; col < nextTetromino[row].length; col++) {
+            if (nextTetromino[row][col]) {
+                contextSide.fillRect(50 + col * grid, row * grid, grid-1, grid-1);
+            }
+        }
+    }
+}
+
 function drawScore() {
     contextSide.globalAlpha = 1;
     contextSide.fillStyle = 'white';
@@ -286,6 +301,7 @@ function loop() {
     }
 
     // Draw player score 
+    drawNextTetromino();
     drawScore();
 }
 
