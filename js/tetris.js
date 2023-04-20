@@ -293,7 +293,7 @@ document.addEventListener('keydown', function(e) {
 
 function pauseGame() {
   
-  alert("paused...click ok to resume!")
+  alert("paused...click ok to resume!");
 }
 
 // start the game
