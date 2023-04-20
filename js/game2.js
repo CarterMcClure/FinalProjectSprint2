@@ -33,7 +33,7 @@ function getRandomInt(min, max) {
 
 // game loop
 function loop() {
-  let gameovr = new Audio("gameover.mp3");
+  let gameovr = new Audio("./audio/gameover.mp3");
   
   
   requestAnimationFrame(loop);
