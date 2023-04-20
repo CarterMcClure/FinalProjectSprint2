@@ -32,10 +32,16 @@
     <body>
     <header class = "header">
         <title>GUI</title>
-            <a href = "#" class = "logo"> Pixel Playground</a>
+           <div class = "controls">
+            <a on-click= "lowerMusic();" href="javascript:lowerMusic();"id = "lower"><img src = "img/minus1.png" height = 50px; width = 50px;  ></a>
+            <a on-click= "playMusic();" href="javascript:playMusic();" id = "play"><img src = "img/play.png" height = 50px; width = 50px; ></a>
+            <a on-click= "pauseMusic();" href="javascript:pauseMusic();"id = "pause"><img src = "img/pause.png" height = 50px; width = 50px;  ></a>
+            <a on-click= "higherMusic();" href="javascript:higherMusic();"id = "higher"><img src = "img/plus.png" height = 50px; width = 50px;  ></a>
+            </div>
+<!--             <a href = "#" class = "logo"> Pixel Playground</a> -->
             <nav class ="linkBar">
 
-                <a href = "index.html"> Home</a>
+                <a href = "home.html"> Home</a>
                 <a href  = "help.html"> Help </a>
                 <a href = "login.html"> Login</a>
             </nav>
