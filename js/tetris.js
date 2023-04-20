@@ -77,12 +77,15 @@ function isValidMove(matrix, cellRow, cellCol) {
 
 // place the tetromino on the playfield
 function placeTetromino() {
+  let gameover = new Audio('audio/gameover.mp3');
+  let beat = new Audio('audio/tetrisclear.mp3');
   for (let row = 0; row < tetromino.matrix.length; row++) {
     for (let col = 0; col < tetromino.matrix[row].length; col++) {
       if (tetromino.matrix[row][col]) {
 
         // game over if piece has any part offscreen
         if (tetromino.row + row < 0) {
+          gameover.play();
           return showGameOver();
         }
 
@@ -94,6 +97,8 @@ function placeTetromino() {
   // check for line clears starting from the bottom and working our way up
   for (let row = playfield.length - 1; row >= 0; ) {
     if (playfield[row].every(cell => !!cell)) {
+      
+      beat.play();
 
       // drop every row above this one
       for (let r = row; r >= 0; r--) {
