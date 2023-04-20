@@ -34,6 +34,8 @@ function getRandomInt(min, max) {
 // game loop
 function loop() {
   let gameovr = new Audio("gameover.mp3");
+  
+  
   requestAnimationFrame(loop);
 
   // slow game loop to 15 fps instead of 60 (60/15 = 4)
@@ -85,11 +87,16 @@ function loop() {
 
     // snake ate apple
     if (cell.x === apple.x && cell.y === apple.y) {
+      
       snake.maxCells++;
+      
+      
 
       // canvas is 400x400 which is 25x25 grids
       apple.x = getRandomInt(0, 25) * grid;
       apple.y = getRandomInt(0, 25) * grid;
+
+      
     }
 
     // check collision with all cells after this one (modified bubble sort)
@@ -97,17 +104,22 @@ function loop() {
 
       // snake occupies same space as a body part. reset game
       if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
+        
         snake.x = 160;
         snake.y = 160;
         snake.cells = [];
         snake.maxCells = 4;
         snake.dx = grid;
         snake.dy = 0;
-        
+
         gameovr.play();
+
+
 
         apple.x = getRandomInt(0, 25) * grid;
         apple.y = getRandomInt(0, 25) * grid;
+
+     
       }
     }
   });
