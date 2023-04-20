@@ -93,7 +93,7 @@ function placeTetromino() {
             }
         }
     }
-    
+
     let linesCleared = 0;
     // check for line clears starting from the bottom and working our way up
     for (let row = playfield.length - 1; row >= 0; ) {
@@ -305,51 +305,63 @@ function loop() {
     drawScore();
 }
 
-// listen to keyboard events to move the active tetromino
-document.addEventListener('keydown', function(e) {
-    if (gameOver) return;
-
-    // left and right arrow keys (move)
-    if (e.which === 37 || e.which === 39) {
-        const col = e.which === 37
-            ? tetromino.col - 1
-            : tetromino.col + 1;
-
-        if (isValidMove(tetromino.matrix, tetromino.row, col)) {
-            tetromino.col = col;
-        }
+class PlayerController {
+    SetupPlayerInput() {
+        console.log("Controller device missing");
     }
+}
 
-    // up arrow key (rotate)
-    if (e.which === 38) {
-        const matrix = rotate(tetromino.matrix);
-        if (isValidMove(matrix, tetromino.row, tetromino.col)) {
-            tetromino.matrix = matrix;
-        }
+class ComputerControls extends PlayerController {
+    SetupPlayerInput() {
+        // listen to keyboard events to move the active tetromino
+        document.addEventListener('keydown', function(e) {
+            if (gameOver) return;
+
+            // left and right arrow keys (move)
+            if (e.which === 37 || e.which === 39) {
+                const col = e.which === 37
+                    ? tetromino.col - 1
+                    : tetromino.col + 1;
+
+                if (isValidMove(tetromino.matrix, tetromino.row, col)) {
+                    tetromino.col = col;
+                }
+            }
+
+            // up arrow key (rotate)
+            if (e.which === 38) {
+                const matrix = rotate(tetromino.matrix);
+                if (isValidMove(matrix, tetromino.row, tetromino.col)) {
+                    tetromino.matrix = matrix;
+                }
+            }
+
+            // down arrow key (drop)
+            if(e.which === 40) {
+                const row = tetromino.row + 1;
+
+                if (!isValidMove(tetromino.matrix, row, tetromino.col)) {
+                    tetromino.row = row - 1;
+
+                    placeTetromino();
+                    return;
+                }
+
+                tetromino.row = row;
+            }
+        });
     }
+}
 
-    // down arrow key (drop)
-    if(e.which === 40) {
-        const row = tetromino.row + 1;
-
-        if (!isValidMove(tetromino.matrix, row, tetromino.col)) {
-            tetromino.row = row - 1;
-
-            placeTetromino();
-            return;
-        }
-
-        tetromino.row = row;
-    }
-});
 
 function pauseGame() {
-  
-  alert("paused...click ok to resume!");
+    alert("paused...click ok to resume!");
 }
 
 // start the game
+let input = new ComputerControls();
+input.SetupPlayerInput();
 rAF = requestAnimationFrame(loop);
 
 const pauseButton = document.getElementById('pause-button');
-  pauseButton.addEventListener('click', pauseGame);
+pauseButton.addEventListener('click', pauseGame);
