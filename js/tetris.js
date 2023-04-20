@@ -291,5 +291,13 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
+function pauseGame() {
+  
+  alert("paused...click ok to resume!")
+}
+
 // start the game
 rAF = requestAnimationFrame(loop);
+
+const pauseButton = document.getElementById('pause-button');
+  pauseButton.addEventListener('click', pauseGame);
