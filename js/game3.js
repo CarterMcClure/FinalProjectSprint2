@@ -402,9 +402,12 @@
        * Update the player's position and animation
        */
       player.update = function() {
+          
+          let jumpefct = new Audio("audio/jump.mp3");
     
         // jump if not currently jumping or falling
         if (KEY_STATUS.space && player.dy === 0 && !player.isJumping) {
+            jumpefct.play();
           player.isJumping = true;
           player.dy = player.jumpDy;
           jumpCounter = 12;
