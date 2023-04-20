@@ -31,14 +31,13 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
+
 // game loop
 function loop() {
   
   let gameovr = new Audio("./audio/gameover.mp3");
   
-  
   requestAnimationFrame(loop);
-
   // slow game loop to 15 fps instead of 60 (60/15 = 4)
   if (++count < 4) {
     return;
@@ -91,7 +90,7 @@ function loop() {
       
       snake.maxCells++;
       
-      
+      playerScore.increaseScore();
 
       // canvas is 400x400 which is 25x25 grids
       apple.x = getRandomInt(0, 25) * grid;
@@ -124,7 +123,11 @@ function loop() {
       }
     }
   });
+  playerScore.draw();
 }
+
+const canvasSide = document.getElementById('side');
+const contextSide = canvasSide.getContext('2d');
 
 // listen to keyboard events to move the snake
 document.addEventListener('keydown', function(e) {
@@ -159,7 +162,28 @@ function pauseGame() {
   alert("paused...press ok to continue");
 }
 
+class snakeScore {
+  constructor() {
+    this.score = 0;
+  }
+
+  draw() {
+    contextSide.clearRect(0, 0, canvasSide.width, canvasSide.height);
+    contextSide.globalAlpha = 1;
+    contextSide.fillStyle = 'white';
+    contextSide.font = '24px monospace';
+    contextSide.textAlign = 'center';
+    contextSide.textBaseline = 'bottom';
+    contextSide.fillText('Score: ' + this.score, canvasSide.width / 2, canvasSide.height - 36);
+}
+
+  increaseScore() {
+    this.score = (snake.maxCells - 4) * 100;
+  }
+}
+
 // start the game
+let playerScore = new snakeScore();
 requestAnimationFrame(loop);
 
 const pauseButton = document.getElementById('pause-button');
