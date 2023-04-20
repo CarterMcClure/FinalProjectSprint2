@@ -21,6 +21,15 @@
     width: 600px;
     height: 360px;
   }
+.buttonplace {
+    position:relative;
+    margin:0 auto;
+    clear:left;
+    height:auto;
+    z-index: 0;
+    text-align:center;
+  }
+
   
   ul {
     list-style: none;
