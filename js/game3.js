@@ -902,3 +902,10 @@
     
     assetLoader.downloadAll();
     })(jQuery);
+
+const pauseButton = document.getElementById('pause-button');
+  pauseButton.addEventListener('click', pauseGame);
+
+  function pauseGame() {
+    alert("paused...click ok to continue");
+  }
