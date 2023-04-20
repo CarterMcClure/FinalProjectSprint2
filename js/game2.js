@@ -155,5 +155,12 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
+function pauseGame() {
+  alert("paused...press ok to continue");
+}
+
 // start the game
 requestAnimationFrame(loop);
+
+const pauseButton = document.getElementById('pause-button');
+  pauseButton.addEventListener('click', pauseGame);
